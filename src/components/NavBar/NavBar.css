@@ -1,0 +1,24 @@
+h3 {
+    font-size: 40px;
+    margin: 5px;
+}
+
+#cabecera {
+    background-color: orange;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.botones {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+}
+
+.boton {
+    background-color: rgb(94, 94, 218);
+}
