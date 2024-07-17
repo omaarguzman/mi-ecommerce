@@ -1,5 +1,6 @@
 import "./NavBar.css"
 import { CartWidget } from "../CartWidget/CartWidget"
+import { Button } from "./Button"
 
 export const NavBar = () => {
 
@@ -30,11 +31,11 @@ export const NavBar = () => {
                 <CartWidget />
             </div>
             <div className="botones">
-                <button className="boton" onClick={hizoClick1}>Productos 1</button>
-                <button className="boton" onClick={hizoClick2}>Productos 2</button>
-                <button className="boton" onClick={hizoClick3}>Productos 3</button>
-                <button className="boton" onClick={hizoClick4}>Productos 4</button>
-                <button className="boton" onClick={hizoClick5}>Productos 5</button>
+                <Button nombre="botonNavBar" texto="Productos 1" funcion={hizoClick1} />
+                <Button nombre="botonNavBar" texto="Productos 2" funcion={hizoClick2} />
+                <Button nombre="botonNavBar" texto="Productos 3" funcion={hizoClick3} />
+                <Button nombre="botonNavBar" texto="Productos 4" funcion={hizoClick4} />
+                <Button nombre="botonNavBar" texto="Productos 5" funcion={hizoClick5} />
             </div>
         </nav>
     )
