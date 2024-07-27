@@ -2,6 +2,9 @@ p {
     font-size: 40px;
     margin: 0;
     padding:0 10px;
+}
+
+.pIC {
     background-color: white;
 }
 
