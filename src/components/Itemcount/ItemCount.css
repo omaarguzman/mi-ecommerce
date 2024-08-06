@@ -6,12 +6,12 @@ p {
 
 .pIC {
     background-color: white;
+    font-size: 15px;
 }
 
 .contenedorIC {
     display: flex;
     height: 10vh;
-    width: 100vw;
     justify-content: center;
     align-items: center;
 }

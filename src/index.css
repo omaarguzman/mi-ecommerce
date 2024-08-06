@@ -3,19 +3,11 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-  background-image: url('./assets/react.svg');
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility; 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  background-image: url('https://previews.123rf.com/images/arrow/arrow1508/arrow150800028/43966988-compras-en-l%C3%ADnea-de-comercio-electr%C3%B3nico-concepto-de-fondo.jpg');
 }
 
 body {
   margin: 0;
-  display: flex;
 }
 
 h1 {
@@ -30,7 +22,6 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -42,15 +33,3 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ItemCount } from './Itemcount/ItemCount'
 import { Button } from './NavBar/Button'
 import ItemDetailContainer from './ItemDetailContainer'
+import { Link } from 'react-router-dom'
 
 export const Item = ({ producto }) => {
 
@@ -12,16 +13,16 @@ export const Item = ({ producto }) => {
   }
 
   return (
-    <div className='contenedor'>
-        <h3>{producto.title}</h3>
+    <div className='cardIDC'>
+        <h3 className='itemH3'>{producto.nombre}</h3>
         <img className='imagenItem' src={producto.image} alt="Imagen del producto" />
-        <p>$ {producto.price}</p>
-        <p>{producto.category}</p>
-        <Button color="blue" texto="Ver detalle..." funcion={mostrarDetalle}>
-          { /* Aquí se manda la propiedad por 'children' automáticamente, y hay que cerrar la etiqueta 'Button' correctamente */ }
+        <p className='itemP'>$ {producto.precio}.00</p>
+        <p className='itemP'>{producto.categoria}</p>
+        <Button color="#7e83fb" funcion={mostrarDetalle}>
+          <Link id='linkButton' to={`/mi-ecommerce/detalle/${producto.id}`}>Ver detalle</Link>
         </Button>
         {
-          isVisible ? <ItemDetailContainer id={producto.id} />: <p>Dale click al botón</p>
+          isVisible ? <ItemDetailContainer id={producto.id} />: <p className='itemP'>Dale click al botón</p>
         }
         <ItemCount />
     </div>
