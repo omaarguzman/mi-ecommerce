@@ -159,7 +159,7 @@ export const getProducts = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(items);
-    }, 1000);
+    }, 20);
   });
 };
 
@@ -167,6 +167,6 @@ export const getProductsById = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(items.find((e) => e.id === id * 1));
-    }, 1000);
+    }, 50);
   });
 };

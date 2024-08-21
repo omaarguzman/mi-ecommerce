@@ -42,3 +42,13 @@
 #pDesc {
   font-size: 15px;
 }
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.light {
+  background-color: beige;
+  color: black;
+}

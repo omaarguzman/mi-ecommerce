@@ -15,7 +15,7 @@ export const Item = ({ producto }) => {
   return (
     <div className='cardIDC'>
         <h3 className='itemH3'>{producto.nombre}</h3>
-        <img className='imagenItem' src={producto.image} alt="Imagen del producto" />
+        <img className='imagenItem' src={producto.imagen} alt="Imagen del producto" />
         <p className='itemP'>$ {producto.precio}.00</p>
         <p className='itemP'>{producto.categoria}</p>
         <Button color="#7e83fb" funcion={mostrarDetalle}>

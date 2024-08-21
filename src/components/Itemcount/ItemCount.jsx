@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Button } from "../NavBar/Button";
 import "./ItemCount.css";
+import { CarritoContext } from "../../context/CarritoContext";
 
-export const ItemCount = () => {
+export const ItemCount = ({handleAddToCart}) => {
   // Hook de useState
   const [count, setCount] = useState(1);
 
@@ -28,6 +29,7 @@ export const ItemCount = () => {
       <Button nombre="botonIC" texto="-" funcion={restar} />
       <p className="pIC"> {count} </p>
       <Button nombre="botonIC" texto="+" funcion={sumar} />
+      <button onClick={() => handleAddToCart(count)}>Agregar al Carrito</button>
     </div>
   );
 };
