@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getProductsById } from "../asyncmock";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "./ItemDetail";
+import { db } from "../servicios/firebaseConfig";
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [prod, setProd] = useState({});
@@ -16,18 +18,15 @@ const ItemDetailContainer = () => {
     // fetch(`https://fakestoreapi.com/products/${id}`)
     // .then(res => res.json())
     // .then(json => setProd(json))
-    getProductsById(id).then((res) => {
-      setProd(res), setCargando(false);
-    });
+    // getProductsById(id).then((res) => {
+    //   setProd(res), setCargando(false);
+    // });
+
+    const productRef = doc(db, "Productos", id);
+    getDoc(productRef).then((snapshot) => {
+      setProd(snapshot.data());
+    }).finally(setCargando(false));
   }, [id]);
-
-  // const mostrarSiguiete = () => {
-  //   setId(id + 1);
-  // };
-
-  // const mostrarAnterior = () => {
-  //   setId(id - 1);
-  // };
 
   console.log(id);
 

@@ -3,6 +3,8 @@ import { getProducts } from "../../asyncmock";
 import { ItemList } from "../ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../servicios/firebaseConfig";
 
 export const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
@@ -20,18 +22,39 @@ export const ItemListContainer = ({ greeting }) => {
     //Guardarlos en el estado 'items'
     //Pasar pro 'props' a ItemList
     setCargando(true);
+    // if (categoria) {
+    //   getProducts()
+    //     .then((prods) => setItems(prods.filter((e) => e.categoria === categoria)))
+    //     .catch((err) => err)
+    //     .finally(() => setCargando(false));
+    // }
+    // else {
+    //     getProducts()
+    //       .then((prods) => setItems(prods))
+    //       .catch((err) => err)
+    //       .finally(() => setCargando(false));
+    // }
+
     if (categoria) {
-      getProducts()
-        .then((prods) => setItems(prods.filter((e) => e.categoria === categoria)))
-        .catch((err) => err)
-        .finally(() => setCargando(false));
-    }
-    else {
-        getProducts()
-          .then((prods) => setItems(prods))
-          .catch((err) => err)
-          .finally(() => setCargando(false));
-    }
+      const productosPorCategoria = query(collection(db, "Productos"), where("categoria", "==", categoria))
+      getDocs(productosPorCategoria).then(snapshot => {
+        const prods = snapshot.docs.map(doc => { 
+          const data = doc.data()
+          return { id: doc.id, ...data }
+        })
+        setItems(prods)
+      }).finally(setCargando(false))
+
+    } else {
+
+    getDocs(collection(db, "Productos")).then(snapshot => {
+      const prods = snapshot.docs.map(doc => { 
+        const data = doc.data()
+        return { id: doc.id, ...data }
+      })
+      setItems(prods)
+    }).finally(setCargando(false))
+  }
   }, [categoria]);
 
   if (cargando) {
