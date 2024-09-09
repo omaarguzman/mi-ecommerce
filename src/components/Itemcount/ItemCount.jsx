@@ -8,19 +8,13 @@ export const ItemCount = ({ handleAddToCart }) => {
   // Hook de useState
   const [count, setCount] = useState(1);
 
-  useEffect(() => {
-    console.log("Se ejecutó el UseEffect");
-  }, []);
-
   let valor = 1;
 
   const restar = () => {
-    console.log("Se está ejecutando restar");
     setCount(count - 1);
   };
 
   const sumar = () => {
-    console.log("Se está ejecutando sumar");
     setCount(count + 1);
   };
 

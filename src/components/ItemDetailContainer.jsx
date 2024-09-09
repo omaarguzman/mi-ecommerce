@@ -28,8 +28,6 @@ const ItemDetailContainer = () => {
     }).finally(setCargando(false));
   }, [id]);
 
-  console.log(id);
-
   if (cargando) {
     return <h3>Cargando...</h3>;
   }

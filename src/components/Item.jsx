@@ -22,7 +22,7 @@ export const Item = ({ producto }) => {
           <Link id='linkButton' to={`/mi-ecommerce/detalle/${producto.id}`}>Ver detalle</Link>
         </Button>
         {
-          isVisible ? <ItemDetailContainer id={producto.id} />: <p className='itemP'>Dale click al botón</p>
+          isVisible ? <ItemDetailContainer id={producto.id} />: <p className='itemP'>Clickea el botón para más información del producto</p>
         }
     </div>
   )
