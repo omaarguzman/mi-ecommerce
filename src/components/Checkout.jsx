@@ -24,7 +24,7 @@ const Checkout = () => {
         };
 
         const data = {user, carrito};
-        const orderRef = collection(db, "ordenes");
+        const orderRef = collection(db, "Órdenes de compras");
         const orderId = await addDoc(orderRef, data);
 
         setOrder(orderId.id);
