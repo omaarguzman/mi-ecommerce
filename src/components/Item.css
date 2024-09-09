@@ -1,0 +1,39 @@
+.imagenItem {
+    height: 150px;
+    margin: 20px 0;
+  }
+  
+  .cardIDC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 450px;
+    border-radius: 5%;
+    background-color: darksalmon;
+  }
+  
+  .cardIDC h3 {
+    font-size: 20px;
+  }
+
+  .cardIDC button {
+    margin: 15px 0;
+  }
+  
+  .botonesIDC {
+    margin: 20px 0;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .itemP {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .pDesc {
+    font-size: 15px;
+    width: 400px;
+  }

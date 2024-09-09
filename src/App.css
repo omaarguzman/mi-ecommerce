@@ -12,7 +12,7 @@
 }
 
 .imagenItem {
-  width: 200px;
+  height: 150px;
 }
 
 .cardIDC {
@@ -21,9 +21,13 @@
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 400px;
+  height: 450px;
   border-radius: 5%;
   background-color: darksalmon;
+}
+
+.cardIDC h3 {
+  font-size: 20px;
 }
 
 .botonesIDC {
@@ -36,7 +40,7 @@
 }
 
 .itemP {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 #pDesc {

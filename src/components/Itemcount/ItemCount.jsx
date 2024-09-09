@@ -4,7 +4,7 @@ import { Button } from "../NavBar/Button";
 import "./ItemCount.css";
 import { CarritoContext } from "../../context/CarritoContext";
 
-export const ItemCount = ({handleAddToCart}) => {
+export const ItemCount = ({ handleAddToCart }) => {
   // Hook de useState
   const [count, setCount] = useState(1);
 
@@ -26,9 +26,11 @@ export const ItemCount = ({handleAddToCart}) => {
 
   return (
     <div className="contenedorIC">
-      <Button nombre="botonIC" texto="-" funcion={restar} />
-      <p className="pIC"> {count} </p>
-      <Button nombre="botonIC" texto="+" funcion={sumar} />
+      <div className="agregarIC">
+        <Button nombre="botonIC" texto="-" funcion={restar} />
+        <p className="pIC"> {count} </p>
+        <Button nombre="botonIC" texto="+" funcion={sumar} />
+      </div>
       <button onClick={() => handleAddToCart(count)}>Agregar al Carrito</button>
     </div>
   );

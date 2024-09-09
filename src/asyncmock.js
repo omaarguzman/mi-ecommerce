@@ -11,7 +11,7 @@ const items = [
     id: 2,
     nombre: "Lenovo IdeaCentre 3i",
     precio: "6,300",
-    descripcion: "Computadora todo en uno de 24 pulgadas con procesadores Intel® Core™ de 12va generación, pantalla hasta FHD IPS vívida con tarjeta gráfica independiente NVIDIA GeForce opcional, sonido envolvente con un sistema de altavoces con certificación Harman Kardon®, cámara web de alta resolución con sensor de infrarrojos integrado opcional para hacer videoconferencias e iniciar sesión con reconocimiento facial de forma segura, diseño meditado para ayudar a tener ordenado el espacio de trabajo.",
+    descripcion: "imagen",
     categoria: "Computadoras",
   },
   {

@@ -8,6 +8,7 @@ import { Contacto } from "./components/Contacto";
 import { Carrito } from "./components/Carrito";
 import { CarritoContextProvider } from "./context/CarritoContext";
 import { ThemeContext } from "./context/ThemeContext";
+import Checkout from "./components/Checkout";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
               <Route path='/mi-ecommerce/detalle/:id' element={<ItemDetailContainer/>}/>
               <Route path='/mi-ecommerce/contacto' element={<Contacto />}/>
               <Route path='/mi-ecommerce/carrito' element={<Carrito/>}/>
+              <Route path="/mi-ecommerce/checkout" element={<Checkout/>}/>
               <Route path='/mi-ecommerce/*' element={<h1>Error 404 not found</h1>}/>
             </Routes>
           </BrowserRouter>

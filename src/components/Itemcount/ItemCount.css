@@ -11,7 +11,14 @@ p {
 
 .contenedorIC {
     display: flex;
-    height: 10vh;
+    row-gap: 10px;
     justify-content: center;
     align-items: center;
 }
+
+.agregarIC {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}    

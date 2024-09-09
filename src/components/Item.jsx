@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { ItemCount } from './Itemcount/ItemCount'
 import { Button } from './NavBar/Button'
 import ItemDetailContainer from './ItemDetailContainer'
 import { Link } from 'react-router-dom'
+import "./Item.css"
 
 export const Item = ({ producto }) => {
 
@@ -24,7 +24,6 @@ export const Item = ({ producto }) => {
         {
           isVisible ? <ItemDetailContainer id={producto.id} />: <p className='itemP'>Dale click al botón</p>
         }
-        <ItemCount />
     </div>
   )
 }

@@ -10,3 +10,8 @@ h1 {
     width: 100vw;
     row-gap: 30px;
 }
+
+.contenedorIC {
+    display: flex;
+    flex-direction: column;
+}

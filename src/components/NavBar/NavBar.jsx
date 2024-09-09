@@ -13,7 +13,9 @@ export const NavBar = () => {
   return (
     <nav id="navbarPrincipal">
       <div id="cabecera">
+      <Link className='LinkNB'to="/mi-ecommerce">
         <Logo />
+      </Link>
         <div className="botones">
           <Button nombre="botonNavBar">
             <Link className='LinkNB'to="/mi-ecommerce">Home</Link>
