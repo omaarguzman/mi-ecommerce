@@ -14,7 +14,11 @@ export const Carrito = () => {
           )
         })}
         <button onClick={vaciarCarrito}>Vaciar carrito</button>
-        <Link to='/mi-ecommerce/checkout'>Finalizar compra</Link>
+        <Link to='/mi-ecommerce/checkout'>
+          <button>
+            Finalizar compra
+          </button>
+        </Link>
     </div>
   )
 }

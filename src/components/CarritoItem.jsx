@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import './CarritoItem.css'
 import { CarritoContext } from '../context/CarritoContext'
 
 const CarritoItem = ({producto}) => {
@@ -7,12 +8,15 @@ const CarritoItem = ({producto}) => {
 
   return (
     <div>
+      <div className='checkoutDiv'>
+        <img src={producto.imagen} alt={producto.nombre} />
         <h3>{producto.nombre}</h3>
-        <p>${producto.precio}</p>
-        <p>{producto.cantidad}</p>
+        <p>Precio: ${producto.precio}</p>
+        <p>Cantidad: {producto.cantidad}</p>
         <button onClick={() => eliminarProducto(producto.id)}>
             Eliminar producto
         </button>
+      </div>
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import "./Checkout.css";
 import { CarritoContext } from "../context/CarritoContext";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../servicios/firebaseConfig";
@@ -34,6 +35,7 @@ const Checkout = () => {
 
     return (
     <div>
+      <div className="checkoutForm">
       <form onSubmit={(e) => handleSubmit(e)}>
         <span>Nombre</span>
         <input type="text" onChange={(e) => setNombre(e.target.value)}/>
@@ -45,6 +47,7 @@ const Checkout = () => {
         <input type="number" onChange={(e) => setTelefono(e.target.value)}/>
         <button type="submit">Finalizar</button>
       </form>
+    </div>
     </div>
   );
 };
