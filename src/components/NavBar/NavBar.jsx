@@ -14,7 +14,7 @@ export const NavBar = () => {
     <nav id="navbarPrincipal">
       <div id="cabecera">
       <Link className='LinkNB'to="/mi-ecommerce">
-        <Logo />
+        <logo />
       </Link>
         <div className="botones">
           <Button nombre="botonNavBar">
