@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
-import { Logo } from "../CartWidget/Logo";
+import { logo } from "../CartWidget/logo";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 
