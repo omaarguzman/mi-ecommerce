@@ -2,7 +2,7 @@ import "./NavBar.css";
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Button } from "./Button";
 import { Link } from "react-router-dom";
-import { logo } from "../CartWidget/logo";
+import { Logo } from "../CartWidget/Logo";
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
 
@@ -14,7 +14,7 @@ export const NavBar = () => {
     <nav id="navbarPrincipal">
       <div id="cabecera">
       <Link className='LinkNB'to="/mi-ecommerce">
-        <logo />
+        <Logo />
       </Link>
         <div className="botones">
           <Button nombre="botonNavBar">
